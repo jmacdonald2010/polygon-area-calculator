@@ -1,0 +1,2 @@
+01/26/2021 09:49
+Started the project. Working on the shape inside of shape function. Currently an error exists, but also, the function is not complete yet. Nothing has been tested yet. Committing and pushing prior to work.
