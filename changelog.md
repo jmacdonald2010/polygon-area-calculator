@@ -1,3 +1,6 @@
+01/26/2021 21:42
+Thought it passed the ex. test, turns out it doesn't, seems to be an error in the draw shape method (need a new line at the end), also some errors w/ returning square
+
 01/26/2021 21:08
 Finished writing the class and subclass. Ran test code and discovered where some errors exist. Committing prior to fixing errors.
 

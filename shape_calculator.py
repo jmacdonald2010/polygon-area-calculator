@@ -25,9 +25,8 @@ class Rectangle:
         diagonal = (self.width ** 2 + self.height ** 2) ** .5
         return diagonal
 
-    # this method has not yet been tested
     def get_picture(self):
-        if self.width or self.height > 50:
+        if (self.width or self.height) > 50:
             return "Too big for picture."
         # build shape
         shape = ""
@@ -42,12 +41,12 @@ class Rectangle:
     def get_amount_inside(self, shape):
         is_width = shape.width # stands for inside shape width
         is_height = shape.height
-        if ((is_height / self.height) < 1) or ((is_width / self.width) < 1):
+        if  (((is_height / self.height) < 1) or ((is_width / self.width))) < 1:
             return 0
-        x = is_width / self.width
-        y = is_height / self.height
-        shapes_inside = x * y # this probably won't work but hey, it's an early draft
-        return shapes_inside
+        x = self.width / is_width
+        y = self.height / is_height
+        shapes_inside = x * y # this math is wrong, need to figure out how to fix, trying to just reverse my division?
+        return int(shapes_inside)
 
     def __str__(self):
         return f"Rectangle(width={self.width}, height={self.height})"
@@ -62,6 +61,7 @@ class Square(Rectangle):
     def set_side(self, length):
         self.width = length
         self.height = length
+        self.length = length
 
     def set_width(self, length):
         self.width = length
@@ -80,14 +80,14 @@ print(rect.get_area())
 rect.set_height(3)
 print(rect.get_perimeter())
 print(rect)
-print(rect.get_picture()) # needs fixed
+print(rect.get_picture()) # possibly fixed now
 
 sq = Square(9)
 print(sq.get_area())
 sq.set_side(4)
 print(sq.get_diagonal())
-print(sq) # error here
-print(sq.get_picture()) # another error here
+print(sq) # fixed
+print(sq.get_picture()) # possibly fixed now
 
 rect.set_height(8)
 rect.set_width(16)
