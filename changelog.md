@@ -1,3 +1,6 @@
+01/26/2021 21:56
+Code passed the test! Just got rid of some old comments and placed new ones that actually describe the code. Going to merge w/ main branch after this push.
+
 01/26/2021 21:42
 Thought it passed the ex. test, turns out it doesn't, seems to be an error in the draw shape method (need a new line at the end), also some errors w/ returning square
 
